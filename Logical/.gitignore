@@ -1,0 +1,8 @@
+build/
+*.bak
+*.ori
+exos-comp-*.deb
+__pycache__/
+*.pyc
+_libtest_typ.so
+libtest_typ.py

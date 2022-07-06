@@ -1,17 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.7.2.98?>
+<?AutomationStudio FileVersion="4.9"?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Library" Language="binary" Description="This library contains function interfaces for IEC 61131-3 operator functions. For the most part, these are mathematical and logical functions.">operator</Object>
     <Object Type="Library" Language="binary" Description="This library contains runtime functions for IEC tasks.">runtime</Object>
     <Object Type="Library" Language="binary" Description="The AsTime Library supports DATE_AND_TIME and TIME data types.">astime</Object>
     <Object Type="Library" Language="binary" Description="This library contains function interfaces for IEC 61131-3 conversion functions.">AsIecCon</Object>
-    <Object Type="Library" Language="binary" Description="This mechatronics library contains basic control function blocks.">MTBasics</Object>
     <Object Type="Library" Language="binary" Description="The BRSystem library provides the user with a number of system functions for e.g. handling permanent memory, accessing exception information, etc.">brsystem</Object>
     <Object Type="Library" Language="binary" Description="This mechatronics library contains different system datatypes and general error numbers.">MTTypes</Object>
     <Object Type="Library" Language="binary" Description="The SYS_LIB library contains functions for memory management and operating system manipulation as well as hardware-specific functions.">sys_lib</Object>
-    <Object Type="Library" Language="binary" Description="This mechatronics library contains function blocks for filtering and basic signal processing.">MTFilter</Object>
     <Object Type="Library" Language="ANSIC">ROS</Object>
     <Object Type="Library" Language="binary" Description="This library contains standard function blocks and functions for IEC 61131-3.">standard</Object>
+    <Object Type="Library" Language="Binary">ExOS</Object>
+    <Object Type="Library" Language="Binary">ExDeploy</Object>
+    <Object Type="Library" Language="Binary">ExData</Object>
+    <Object Type="Library" Language="binary" Description="The FileIO library provides function blocks for file handling.">FileIO</Object>
+    <Object Type="Library" Language="binary" Description="The AsIOTime library is used to generate time stamps based on system time of the I/O system.">AsIOTime</Object>
+    <Object Type="Library" Language="binary" Description="The ArEventLog library can be used to collect additional error information and for further processing.">ArEventLog</Object>
+    <Object Type="Library" Language="binary" Description="This library contains FBKs for exchanging data (data stream) via stream sockets (TCP).">AsTCP</Object>
+    <Object Type="Library" Language="binary" Description="This mechatronics library contains function blocks for filtering and basic signal processing.">MTFilter</Object>
+    <Object Type="Library" Language="binary" Description="This mechatronics library contains basic control function blocks.">MTBasics</Object>
   </Objects>
 </Package>

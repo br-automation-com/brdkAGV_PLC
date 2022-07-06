@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.7.2.98?>
+<?AutomationStudio Version=4.10.3.60 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="X90AO410.08-00" Type="X90AO410.08-00" Version="1.1.0.0">
     <Connection Connector="ST" TargetModule="X90CP174_48_00" TargetConnector="ST4" />
@@ -49,7 +49,11 @@
       <Parameter ID="InternetAddress" Value="192.168.87.230" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
+    <Connector Name="IF3">
+      <Parameter ID="DNAConfiguration" Value="manual" />
+    </Connector>
     <Parameter ID="ConfigurationID" Value="AGV_Config1" />
+    <Parameter ID="UserPartitionSize" Value="0" />
     <Parameter ID="EnableUsbRemoteInstall" Value="1" />
     <Parameter ID="EnableCfRemoteInstall" Value="1" />
     <Parameter ID="Cyclic1Duration" Value="5000" />
@@ -68,6 +72,9 @@
     <Parameter ID="Cyclic7Tolerance" Value="1000000" />
     <Parameter ID="Cyclic8Duration" Value="10000" />
     <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="USER" />
+    <Parameter ID="FileDevicePath1" Value="USER_PATH" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="2" />
   </Module>

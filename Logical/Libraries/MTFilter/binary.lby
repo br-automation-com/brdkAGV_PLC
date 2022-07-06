@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.7.2.98?>
-<Library Version="5.06.0" SubType="binary" Description="This mechatronics library contains function blocks for filtering and basic signal processing." xmlns="http://br-automation.co.at/AS/Library">
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="5.12.0" SubType="binary" Description="This mechatronics library contains function blocks for filtering and basic signal processing." xmlns="http://br-automation.co.at/AS/Library">
   <Files>
     <File>MTFilter.fun</File>
     <File>MTFilter.typ</File>

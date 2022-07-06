@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gTarget_0" Type="exostarget">
+    <Group ID="General">
+      <Property ID="ConnectionIP" Value="192.168.87.128" />
+      <Group ID="Logging">
+        <Property ID="LogLevel" Value="Debug" />
+        <Group ID="LogFilters">
+          <Property ID="LogFilterUser" Value="On" />
+          <Property ID="LogFilterSystem" Value="On" />
+          <Property ID="LogFilterVerbose" Value="On" />
+        </Group>
+        <Property ID="LogDestination" Value="Volatile" />
+      </Group>
+      <Selector ID="Deployment" Value="On">
+        <Property ID="MaxRestarts" Value="10" />
+      </Selector>
+      <Selector ID="DataConnection" Value="On">
+        <Property ID="ConnectionType" Value="TCPIP" />
+        <Group ID="TimeSynchronization">
+          <Group ID="TimeConnection">
+            <Property ID="TimePort" Value="49001" />
+          </Group>
+          <Property ID="PrecisionUsec" Value="1000" />
+          <Property ID="GuardTimeSec" Value="36" />
+          <Property ID="DeviationPerHourUsec" Value="100000" />
+        </Group>
+        <Group ID="DataConnectionLogging">
+          <Group ID="LogConnection">
+            <Property ID="LogPort" Value="49002" />
+            <Property ID="LogShmPath" Value="exos_log" />
+          </Group>
+          <Property ID="LogCycleTimeMsec" Value="50" />
+        </Group>
+      </Selector>
+    </Group>
+    <Group ID="Components">
+      <Group ID="ComponentsGeneral">
+        <Property ID="ComponentsHeartbeatMsec" Value="500" />
+        <Property ID="ComponentsTimeoutSec" Value="2" />
+        <Property ID="ComponentsTaskClass" Value="2" />
+        <Property ID="ComponentsCycleTimeMsec" Value="10" />
+      </Group>
+      <Group ID="Component[0]">
+        <Property ID="ComponentConfigurationLink" Value="gros_topics_typ_0" />
+        <Group ID="DataModels">
+          <Group ID="Instance[0]">
+            <Property ID="InstanceName" Value="ros_topics_typ_0" />
+            <Group ID="InstanceConnection">
+              <Property ID="InstancePort" Value="49003" />
+              <Property ID="InstanceShmPath" Value="ros_topics_typ_0" />
+            </Group>
+          </Group>
+        </Group>
+      </Group>
+    </Group>
+    <Group ID="ComponentDataConnection">
+      <Property ID="Version" Value="2.0.0-1" />
+      <Property ID="ErrorHandling" Value="Target" />
+      <Property ID="RestartEvent" Value="Target" />
+      <Property ID="StartupTimeout" Value="5" />
+      <Group ID="Predefined">
+        <Group ID="Files">
+          <Group ID="File[0]">
+            <Property ID="FileName" Value="ufw-exos-data" />
+            <Property ID="ChangeEvent" Value="Ignore" />
+          </Group>
+          <Group ID="File[1]">
+            <Property ID="FileName" Value="exos-data-ports-allow.sh" />
+            <Property ID="ChangeEvent" Value="Restart" />
+          </Group>
+          <Group ID="File[2]">
+            <Property ID="FileName" Value="exos-data.conf" />
+            <Property ID="ChangeEvent" Value="Restart" />
+          </Group>
+          <Group ID="File[3]">
+            <Property ID="FileName" Value="exos-data_2.0.0-1_amd64.deb" />
+            <Property ID="ChangeEvent" Value="Reinstall" />
+          </Group>
+          <Group ID="File[4]">
+            <Property ID="FileName" Value="exos-data-eth_2.0.0-1_amd64.deb" />
+            <Property ID="ChangeEvent" Value="Reinstall" />
+          </Group>
+          <Group ID="File[5]">
+            <Property ID="FileName" Value="exos-data-remove.sh" />
+            <Property ID="ChangeEvent" Value="Ignore" />
+          </Group>
+          <Group ID="File[6]">
+            <Property ID="FileName" Value="run_server.sh" />
+            <Property ID="ChangeEvent" Value="Ignore" />
+          </Group>
+          <Group ID="File[7]">
+            <Property ID="FileName" Value="setup_build_environment.sh" />
+            <Property ID="ChangeEvent" Value="Ignore" />
+          </Group>
+          <Group ID="File[8]">
+            <Property ID="FileName" Value="libzmq5_4.2.1-4+deb9u2_amd64.deb" />
+            <Property ID="ChangeEvent" Value="Reinstall" />
+          </Group>
+          <Group ID="File[9]">
+            <Property ID="FileName" Value="libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb" />
+            <Property ID="ChangeEvent" Value="Reinstall" />
+          </Group>
+          <Group ID="File[10]">
+            <Property ID="FileName" Value="libsodium18_1.0.11-2_amd64.deb" />
+            <Property ID="ChangeEvent" Value="Reinstall" />
+          </Group>
+        </Group>
+        <Group ID="Services">
+          <Group ID="Service[0]">
+            <Property ID="Type" Value="Install" />
+            <Property ID="Command" Value="dpkg -i *.deb" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[1]">
+            <Property ID="Type" Value="Remove" />
+            <Property ID="Command" Value="dpkg --purge exos-data" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[2]">
+            <Property ID="Type" Value="Remove" />
+            <Property ID="Command" Value="dpkg --purge exos-data-eth" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[3]">
+            <Property ID="Type" Value="Remove" />
+            <Property ID="Command" Value="sh exos-data-remove.sh" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[4]">
+            <Property ID="Type" Value="Startup" />
+            <Property ID="Command" Value="cp exos-data.conf /etc/exos-data.conf" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[5]">
+            <Property ID="Type" Value="Startup" />
+            <Property ID="Command" Value="cp ufw-exos-data /etc/ufw/applications.d/ufw-exos-data" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[6]">
+            <Property ID="Type" Value="Startup" />
+            <Property ID="Command" Value="sh exos-data-ports-allow.sh" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+          <Group ID="Service[7]">
+            <Property ID="Type" Value="Runtime" />
+            <Property ID="Command" Value="/usr/bin/exos_mr" />
+            <Property ID="WorkingDirectory" />
+          </Group>
+        </Group>
+      </Group>
+    </Group>
+    <Group ID="Simulation">
+      <Property ID="SimConnectionIP" Value="192.168.87.128" />
+      <Selector ID="SimDeployment" Value="On" />
+      <Selector ID="SimDataConnection" Value="On">
+        <Property ID="SimConnectionType" Value="TCPIP" />
+        <Group ID="SimTimeSynchronization">
+          <Property ID="SimPrecisionUsec" Value="5000" />
+          <Property ID="SimGuardTimeSec" Value="30" />
+        </Group>
+      </Selector>
+      <Group ID="SimComponentsGeneral">
+        <Property ID="SimComponentsHeartbeatMsec" Value="1000" />
+        <Property ID="SimComponentsTimeoutSec" Value="75" />
+      </Group>
+    </Group>
+  </Element>
+</Configuration>

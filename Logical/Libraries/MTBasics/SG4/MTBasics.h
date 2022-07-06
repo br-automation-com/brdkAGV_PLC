@@ -307,14 +307,12 @@ typedef struct MTBasicsOscTuningInternalType
 typedef struct MTBasicsPFMInternalType
 {	float CycleTime;
 	plcbit ParametersValid;
-	float In;
 	float PulseWidth;
-	float MinPause;
-	float Area;
-	float AreaC;
-	float OffTime;
+	float In;
 	float OnTime;
-	plcbit Update;
+	float OffTime;
+	float PeriodCounter;
+	float MinPause;
 	plcbit UpdateOld;
 	plcbit EnableOld;
 } MTBasicsPFMInternalType;
