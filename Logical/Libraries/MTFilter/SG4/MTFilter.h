@@ -1,5 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
+/* MTFilter 5.19.0 */
 
 #ifndef _MTFILTER_
 #define _MTFILTER_
@@ -7,16 +8,35 @@
 extern "C" 
 {
 #endif
+#ifndef _MTFilter_VERSION
+#define _MTFilter_VERSION 5.19.0
+#endif
 
 #include <bur/plctypes.h>
-
-#include <brsystem.h>
-#include <sys_lib.h>
-#include <MTTypes.h>
 
 #ifndef _BUR_PUBLIC
 #define _BUR_PUBLIC
 #endif
+#ifdef _SG3
+		#include "MTTypes.h"
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+#ifdef _SG4
+		#include "MTTypes.h"
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+#ifdef _SGC
+		#include "MTTypes.h"
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+
+
 /* Constants */
 #ifdef _REPLACE_CONST
  #define mtBCD_WRN_DISTURB_MODEL_INVALID (-2131753970)
@@ -46,9 +66,6 @@ extern "C"
  #define mtBCD_ERR_FILTER_ORDER_INVALID (-1058012157)
  #define mtBCD_ERR_FILTER_TYPE_INVALID (-1058012158)
 #else
- #ifndef _GLOBAL_CONST
-   #define _GLOBAL_CONST _WEAK const
- #endif
  _GLOBAL_CONST signed long mtBCD_WRN_DISTURB_MODEL_INVALID;
  _GLOBAL_CONST signed long mtBCD_WRN_NOISEREDUCTION_INVALID;
  _GLOBAL_CONST signed long mtBCD_WRN_TRANSFER_FCN_INVALID;

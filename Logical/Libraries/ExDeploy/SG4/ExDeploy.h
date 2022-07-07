@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* ExDeploy 2.00.0 */
+/* ExDeploy 2.01.0 */
 
 #ifndef _EXDEPLOY_
 #define _EXDEPLOY_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _ExDeploy_VERSION
-#define _ExDeploy_VERSION 2.00.0
+#define _ExDeploy_VERSION 2.01.0
 #endif
 
 #include <bur/plctypes.h>

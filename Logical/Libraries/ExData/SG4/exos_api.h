@@ -11,7 +11,7 @@ All rights reserved
 /**
  * The version of the exos api
  */
-#define EXOS_API_VERSION "2.0.0-1"
+#define EXOS_API_VERSION "2.1.0-1"
 /*
 NUMERIC version
        0 -       9999 build revision
@@ -19,7 +19,11 @@ NUMERIC version
   100000 -    9900000 1-99 minor version
 10000000 -  990000000 1-99 major version
 */
-#define EXOS_API_NUMERIC_VERSION 20000001
+#define EXOS_API_NUMERIC_VERSION 20100001
+
+/*Maximum size for a dataset*/
+#define EXOS_API_MAX_DATASET_SIZE 200000
+
 #ifdef _SG4
 #include <bur/plctypes.h>
 #else
@@ -139,6 +143,14 @@ void exos_datamodel_calc_dataset_info(exos_dataset_info_t *info, size_t info_siz
 */
 EXOS_ERROR_CODE exos_datamodel_connect(exos_datamodel_handle_t *datamodel, const char *config, const exos_dataset_info_t *info, size_t info_size, exos_datamodel_event_cb datamodel_event_callback);
 
+typedef enum
+{
+    EXOS_DATAMODEL_PROCESS_BLOCKING,
+    EXOS_DATAMODEL_PROCESS_NON_BLOCKING
+} EXOS_DATAMODEL_PROCESS_MODE;
+
+EXOS_ERROR_CODE exos_datamodel_set_process_mode(exos_datamodel_handle_t *datamodel, EXOS_DATAMODEL_PROCESS_MODE mode);
+
 /**
  * Set the datamodel into OPERATIONAL state
  * 
@@ -173,7 +185,8 @@ typedef struct exos_datamodel_sync_info
     bool _reserved_bool[8];
     uint32_t missed_dmr_cycles;
     uint32_t missed_ar_cycles;
-    uint32_t _reserved_uint32[8];
+    EXOS_DATAMODEL_PROCESS_MODE process_mode;
+    uint32_t _reserved_uint32[7];
 } exos_datamodel_sync_info_t;
 
 typedef struct exos_datamodel_private

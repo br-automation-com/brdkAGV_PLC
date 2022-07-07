@@ -72,7 +72,7 @@ class ros_topics_typEventHandler(libros_topics_typ.ros_topics_typEventHandler):
         libros_topics_typ.ros_topics_typEventHandler.__init__(self)
         self.node = node
         self.node.get_logger().info("Init ExOs eventhandler");
-        
+        self.node.get_logger().info("Test");
 
     def on_connected(self):
         self.ros_topics_typ_datamodel.log.success("python ros_topics_typ_datamodel connected!")

@@ -1,6 +1,7 @@
 
 FUNCTION_BLOCK ExLogConfig (*Get or set the exOS data logger configuration.*)
 	VAR_INPUT
+		ExTargetLink : REFERENCE TO ExTargetLink; (*Connection to exOS Target configuration.*)
 		Enable : BOOL; (*The function block is active as long as this input is set.*)
 		LogConfig : REFERENCE TO ExLogConfigType; (*exOS Logger configuration.*)
 		Update : BOOL; (*Update the exOS Logger configuration (if set, the configuration is updated, otherwise the current configuration is read).*)
@@ -9,6 +10,7 @@ FUNCTION_BLOCK ExLogConfig (*Get or set the exOS data logger configuration.*)
 		Active : BOOL; (*Function block active.*)
 		Error : BOOL; (*Error occurred during execution.*)
 		StatusID : DINT; (*Status information.*)
+		ErrorID : DINT; (*Additional status information (API error code)*)
 		UpdateDone : BOOL; (*exOS Logger configuration successfully updated.*)
 	END_VAR
 	VAR
@@ -75,7 +77,7 @@ FUNCTION_BLOCK ExTargetInfo (*Get deployment and execution information of an exO
 		Error : BOOL; (*Error occurred during execution.*)
 		StatusID : DINT; (*Status information.*)
 		Deploying : BOOL; (*exOS Target is deploying.*)
-		Operational : BOOL; (*exOS Target is operational.*)
+		Operational : BOOL; (*exOS Target is operational. In case Deployment is disabled (Off), Operational is set when the data connection to the exOS Target is established (TargetConnected).*)
 		Stopped : BOOL; (*exOS Target is stopped.*)
 		Aborted : BOOL; (*exOS Target is aborted.*)
 		Diag : ExTargetDiagType; (*Diagnostic data of the exOS Target.*)
@@ -94,7 +96,7 @@ FUNCTION_BLOCK ExComponentInfo (*Get deployment and execution information of an 
 		StatusID : DINT; (*Status information.*)
 		Name : STRING[35]; (*Name of the exOS Component.*)
 		Deploying : BOOL; (*exOS Component is deploying.*)
-		Operational : BOOL; (*exOS Component is operational.*)
+		Operational : BOOL; (*exOS Component is operational. In case Deployment is disabled (Off), Operational is set when the data connection to the exOS Target is established (TargetConnected).*)
 		Stopped : BOOL; (*exOS Component is stopped.*)
 		Aborted : BOOL; (*exOS Component is aborted.*)
 		Diag : ExComponenInfoDiagType; (*Diagnostic data of the exOS Component.*)

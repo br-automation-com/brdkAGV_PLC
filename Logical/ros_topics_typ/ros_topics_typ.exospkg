@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+<ComponentPackage Version="2.1.0" ErrorHandling="Component" StartupTimeout="0">
     <File FileName="Linux\ros_topics_typ.py" ChangeEvent="Restart"/>
     <File FileName="Linux\exos-comp-ros_topics_typ_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
     <Service Type="Install" Command="dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb"/>
@@ -24,7 +24,7 @@
         </BuildCommand>
     </Build>
     <!-- ComponentGenerator info - do not change! -->
-    <ComponentGenerator Class="ExosComponentSWIG" Version="2.0.1">
+    <ComponentGenerator Class="ExosComponentSWIG" Version="2.0.0">
         <Option Name="exportLinux" Value="exos-comp-ros_topics_typ_1.0.0_amd64.deb,ros_topics_typ.py"/>
         <Option Name="templateAR" Value="c-api"/>
         <Option Name="typeName" Value="ros_topics_typ"/>

@@ -83,7 +83,8 @@ PROGRAM _CYCLIC
     
 	ExDatamodelInfo_0(ExTargetLink := ADR(gTarget_0), Enable := TRUE, InstanceName := 'ros_topics_typ_0');
 	//--------------- ex OS done ----------------
-    
+	ExSyncInfo_0(ExTargetLink := ADR(gTarget_0), Enable := TRUE);
+	
 	
 
 	ros.topics.twist.linear.x := MAX(MIN(ros.topics.twist.linear.x,ros.topics.config.maxSpeed),ros.topics.config.minSpeed);

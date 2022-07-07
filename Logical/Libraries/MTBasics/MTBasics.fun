@@ -162,18 +162,18 @@ END_FUNCTION_BLOCK
 	VAR_INPUT
 		Enable : BOOL; (*Enables/Disables the function block.*)
 		PIDParameters : MTPIDParametersType; (*PID parameters.*)
-		MinOut : REAL;
-		MaxOut : REAL;
-		Invert : BOOL;
+		MinOut : REAL; (*Lower manipulated variable limit (lower modulation limit of the subsequent actuator).*)
+		MaxOut : REAL; (*Upper manipulated variable limit (upper modulation limit of the subsequent actuator).*)
+		Invert : BOOL; (*Reverses the effective direction of the controller.*)
 		Update : BOOL; (*Updates the parameters listed above on a rising edge.*)
 		SetValue : REAL; (*Set value (reference variable).*)
 		ActValue : REAL; (*Actual value (controlled variable).*)
 		IntegrationPartPresetValue : REAL; (*Preset value for the integral component IntegrationPart.*)
 		SetIntegrationPart : BOOL; (*A positive edge on SetIntegrationPart sets the integral component IntegrationPart of the PID controller to IntegrationPartPresetValue.*)
 		HoldOut : BOOL; (*Freezes the function block.*)
-		TrackingValue : REAL; (*Preset value for the integral component IntegrationPart.*)
-		EnableTracking : BOOL; (*A positive edge on SetIntegrationPart sets the integral component IntegrationPart of the PID controller to IntegrationPartPresetValue.*)
-		HoldIntegration : MTPIDIntegrationEnum; (*PID parameters.*)
+		TrackingValue : REAL; (*Manipulated variable for manual mode.*)
+		EnableTracking : BOOL; (*Enables manual mode.*)
+		HoldIntegration : MTPIDIntegrationEnum; (*The integral component is kept depending on the direction.*)
 	END_VAR
 	VAR_OUTPUT
 		Busy : BOOL; (*Function block is busy.*)
@@ -186,8 +186,8 @@ END_FUNCTION_BLOCK
 		ProportionalPart : REAL; (*Proportional component.*)
 		IntegrationPart : REAL; (*Integral component.*)
 		DerivativePart : REAL; (*Derivative component.*)
-		TrackingActive : BOOL; (*Derivative component.*)
-		IntegrationStatus : MTPIDIntegrationEnum; (*Derivative component.*)
+		TrackingActive : BOOL; (*Tracking is active.*)
+		IntegrationStatus : MTPIDIntegrationEnum; (*Information about the current state of the integral component.*)
 		SystemReference : {REDUND_UNREPLICABLE} UDINT; (*System reference.*)
 	END_VAR
 	VAR

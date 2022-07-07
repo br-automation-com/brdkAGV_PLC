@@ -3,6 +3,7 @@ VAR
 	ros_topics_typCyclic_0 : ros_topics_typCyclic;
 	ros_topics_typExit_0 : ros_topics_typExit;
 	ExComponentInfo_0 : ExComponentInfo;
+	ExSyncInfo_0 : ExSyncInfo;
 	ExDatamodelInfo_0 : ExDatamodelInfo;
 	ros : ros_typ;
 	config : REFERENCE TO config_typ;

@@ -3,6 +3,7 @@
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
     <Task Name="motorCtrl" Source="ros_topics_typ.motorCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="WaterTank1" Source="WaterTank.WaterTank_0.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="WaterTank_" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
@@ -44,6 +45,7 @@
     <LibraryObject Name="ArEventLog" Source="Libraries.ArEventLog.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsTCP" Source="Libraries.AsTCP.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="ros_topics" Source="ros_topics_typ.ros_topics.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <LibraryObject Name="WaterTank" Source="WaterTank.WaterTank.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astime" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>

@@ -1,0 +1,463 @@
+[ExOS]: starting up targets..
+[ExOS]: ExTargetLink 'gTarget_0' setup ok
+[ExOS]: Initializing target gTarget_0 with installation type 1
+[ExOS]: ExComponentLink 'gros_topics_typ_0' setup ok
+[ExConfig]: NEW COMPONENT: gros_topics_typ_0
+[ExConfig]: ErrorHandling: Component => 1
+[ExConfig]: Predefined/Files/File[0]/ChangeEvent: File[0]: Restart => 1
+[ExConfig]: Predefined/Files/File[0]/FileName: File[0]: Linux\ros_topics_typ.py => ros_topics_typ.py
+[ExConfig]: Predefined/Files/File[1]/ChangeEvent: File[1]: Reinstall => 2
+[ExConfig]: Predefined/Files/File[1]/FileName: File[1]: Linux\exos-comp-ros_topics_typ_1.0.0_amd64.deb => exos-comp-ros_topics_typ_1.0.0_amd64.deb
+[ExConfig]: Predefined/Services/Service[0]/Command: Service[0]: dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb => dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb
+[ExConfig]: Predefined/Services/Service[0]/Type: Service[0]: Install => 0
+[ExConfig]: Predefined/Services/Service[0]/WorkingDirectory: Service[0]:  => NULL
+[ExConfig]: Predefined/Services/Service[1]/Command: Service[1]: dpkg --purge exos-comp-ros_topics_typ => dpkg --purge exos-comp-ros_topics_typ
+[ExConfig]: Predefined/Services/Service[1]/Type: Service[1]: Remove => 1
+[ExConfig]: Predefined/Services/Service[1]/WorkingDirectory: Service[1]:  => NULL
+[ExConfig]: Predefined/Services/Service[2]/Command: Service[2]: cp ros_topics_typ.py /home/user/brdkAGV_linux/ros_ws/src/motor_control_exos/motor_control_exos/motor_control_exos.py => cp ros_topics_typ.py /home/user/brdkAGV_linux/ros_ws/src/motor_control_exos/motor_control_exos/motor_control_exos.py
+[ExConfig]: Predefined/Services/Service[2]/Type: Service[2]: Startup => 2
+[ExConfig]: Predefined/Services/Service[2]/WorkingDirectory: Service[2]:  => NULL
+[ExConfig]: RestartEvent: Component => 1
+[ExConfig]: StartupTimeout: 0 => 0
+[ExConfig]: NEW COMPONENT - DATA CONNECTION
+[ExConfig]: ComponentDataConnection/ErrorHandling: Target => 2
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[0]/ChangeEvent: File[0]: Ignore => 0
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[0]/FileName: File[0]: ufw-exos-data => ufw-exos-data
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[10]/ChangeEvent: File[10]: Reinstall => 2
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[10]/FileName: File[10]: libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb => libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[11]/ChangeEvent: File[11]: Reinstall => 2
+[ExConf
+ig]: ComponentDataConnection/Predefined/Files/File[11]/FileName: File[11]: libsodium18_1.0.11-2_amd64.deb => libsodium18_1.0.11-2_amd64.deb
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[1]/ChangeEvent: File[1]: Ignore => 0
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[1]/FileName: File[1]: exos-data-ufw-profile.sh => exos-data-ufw-profile.sh
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[2]/ChangeEvent: File[2]: Restart => 1
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[2]/FileName: File[2]: exos-data-ports-allow.sh => exos-data-ports-allow.sh
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[3]/ChangeEvent: File[3]: Restart => 1
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[3]/FileName: File[3]: exos-data.conf => exos-data.conf
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[4]/ChangeEvent: File[4]: Reinstall => 2
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[4]/FileName: File[4]: exos-data_2.1.0-1_amd64.deb => exos-data_2.1.0-1_amd64.deb
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[5]/ChangeEvent: File[5]: Reinstall => 2
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[5]/FileName: File[5]: exos-data-eth_2.1.0-1_amd64.deb => exos-data-eth_2.1.0-1_amd64.deb
+[ExConfig
+]: ComponentDataConnection/Predefined/Files/File[6]/ChangeEvent: File[6]: Ignore => 0
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[6]/FileName: File[6]: exos-data-remove.sh => exos-data-remove.sh
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[7]/ChangeEvent: File[7]: Ignore => 0
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[7]/FileName: File[7]: run_server.sh => run_server.sh
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[8]/ChangeEvent: File[8]: Ignore => 0
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[8]/FileName: File[8]: setup_build_environment.sh => setup_build_environment.sh
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[9]/ChangeEvent: File[9]: Reinstall => 2
+[ExConfig]: ComponentDataConnection/Predefined/Files/File[9]/FileName: File[9]: libzmq5_4.2.1-4+deb9u2_amd64.deb => libzmq5_4.2.1-4+deb9u2_amd64.deb
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[0]/Command: Service[0]: dpkg -i *.deb => dpkg -i *.deb
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[0]/Type: Service[0]: Install => 0
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[0]/WorkingDirectory: Service[0]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[1]/Command: Serv
+ice[1]: dpkg --purge exos-data => dpkg --purge exos-data
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[1]/Type: Service[1]: Remove => 1
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[1]/WorkingDirectory: Service[1]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[2]/Command: Service[2]: dpkg --purge exos-data-eth => dpkg --purge exos-data-eth
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[2]/Type: Service[2]: Remove => 1
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[2]/WorkingDirectory: Service[2]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[3]/Command: Service[3]: sh exos-data-remove.sh => sh exos-data-remove.sh
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[3]/Type: Service[3]: Remove => 1
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[3]/WorkingDirectory: Service[3]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[4]/Command: Service[4]: cp exos-data.conf /etc/exos-data.conf => cp exos-data.conf /etc/exos-data.conf
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[4]/Type: Service[4]: Startup => 2
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[4]/WorkingDirectory:
+ Service[4]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[5]/Command: Service[5]: sh exos-data-ufw-profile.sh => sh exos-data-ufw-profile.sh
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[5]/Type: Service[5]: Startup => 2
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[5]/WorkingDirectory: Service[5]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[6]/Command: Service[6]: sh exos-data-ports-allow.sh => sh exos-data-ports-allow.sh
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[6]/Type: Service[6]: Startup => 2
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[6]/WorkingDirectory: Service[6]:  => NULL
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[7]/Command: Service[7]: /usr/bin/exos_mr => /usr/bin/exos_mr
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[7]/Type: Service[7]: Runtime => 3
+[ExConfig]: ComponentDataConnection/Predefined/Services/Service[7]/WorkingDirectory: Service[7]:  => NULL
+[ExConfig]: ComponentDataConnection/RestartEvent: Target => 2
+[ExConfig]: ComponentDataConnection/StartupTimeout: 5 => 5
+[ExConfig]: Found component gros_topics_typ_0 in id: Components/Component[0]/ComponentConfigurationLink
+
+[ExConfig]: NEW DATAMODEL at Component 0 Datamodel 0
+[ExConfig]: Component 0 DataModelInstance 0 Port: 49003
+[ExConfig]: Component 0 DataModelInstance 0 ShmPath: ros_topics_typ_0
+[ExConfig]: Component 0 DataModelInstance 0 Name: ros_topics_typ_0
+[ExConfig]: Components/ComponentsGeneral/ComponentsCycleTimeMsec: 10 => 10
+[ExConfig]: Components/ComponentsGeneral/ComponentsHeartbeatMsec: 500 => 500
+[ExConfig]: Components/ComponentsGeneral/ComponentsTaskClass: 2 => 2
+[ExConfig]: Components/ComponentsGeneral/ComponentsTimeoutSec: 2 => 2
+[ExConfig]: General/ConnectionIP: 192.168.87.128
+[ExConfig]: General/DataConnection: On => 1
+[ExConfig]: General/DataConnection/ConnectionType: TCPIP => 2
+[ExConfig]: General/DataConnection/DataConnectionLogging/LogConnection/LogPort: 49002 => 49002
+[ExConfig]: General/DataConnection/DataConnectionLogging/LogConnection/LogShmPath: exos_log => exos_log
+[ExConfig]: General/DataConnection/DataConnectionLogging/LogCycleTimeMsec: 50 => 50
+[ExConfig]: found id: General/DataConnection/TimeSynchronization/DeviationPerHourUsec with type: Property with property type: UDINT
+[ExConfig]: General/DataConnection/TimeSynchronization/GuardTimeSec: 180 => 180
+[ExConfig]: General/DataConnection/TimeSynchronization/Preci
+sionUsec: 5000 => 5000
+[ExConfig]: General/DataConnection/TimeSynchronization/TimeConnection/TimePort: 49001 => 49001
+[ExConfig]: General/DataConnection/TimeSynchronization/TimeConnection/TimeShmPath: exos_time => exos_time
+[ExConfig]: General/Deployment:  => 1
+[ExConfig]: General/Deployment/MaxRestarts: 10 => 10
+[ExConfig]: found id: General/InitializeEditor with type: Property with property type: STRING
+[ExConfig]: General/Logging/LogDestination: Volatile => 1
+[ExConfig]: General/Logging/LogFilters/LogFilterSystem: On += 2
+[ExConfig]: General/Logging/LogFilters/LogFilterUser: On += 3
+[ExConfig]: General/Logging/LogFilters/LogFilterVerbose: On += 7
+[ExConfig]: General/Logging/LogLevel: Debug => 4
+[ExConfig]: found id: Simulation/SimDataConnection/SimConnectionType with type: Property with property type: STRING
+[ExConfig]: file 'exos-data_' removed at index 6 from dataconnection!
+[ExConfig]: remove service 'dpkg --purge exos-data' removed at index 1 from dataconnection!
+[ExOS]: Created CriticalSection 625 for deployment FUBs
+[ExOS]: Adding deployment target gTarget_0 OK!
+[ExOS]: Adding deployment dataconnection component exos-data OK!
+[ExOS]: Adding file exos-data/ufw-exos-data OK!
+[ExOS]: Adding file exos-
+data/libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb OK!
+[ExOS]: Adding file exos-data/libsodium18_1.0.11-2_amd64.deb OK!
+[ExOS]: Adding file exos-data/exos-data-ufw-profile.sh OK!
+[ExOS]: Adding file exos-data/exos-data-ports-allow.sh OK!
+[ExOS]: Adding file exos-data/exos-data.conf OK!
+[ExOS]: Adding file exos-data/exos-data-eth_2.1.0-1_amd64.deb OK!
+[ExOS]: Adding file exos-data/exos-data-remove.sh OK!
+[ExOS]: Adding file exos-data/run_server.sh OK!
+[ExOS]: Adding file exos-data/setup_build_environment.sh OK!
+[ExOS]: Adding file exos-data/libzmq5_4.2.1-4+deb9u2_amd64.deb OK!
+[ExOS]: Adding runtime service dpkg -i *.deb OK!
+[ExOS]: Adding runtime service dpkg --purge exos-data-eth OK!
+[ExOS]: Adding runtime service sh exos-data-remove.sh OK!
+[ExOS]: Adding runtime service cp exos-data.conf /etc/exos-data.conf OK!
+[ExOS]: Adding runtime service sh exos-data-ufw-profile.sh OK!
+[ExOS]: Adding runtime service sh exos-data-ports-allow.sh OK!
+[ExOS]: Adding runtime service /usr/bin/exos_mr OK!
+[ExOS]: Adding deployment user component gros_topics_typ_0 OK!
+[ExOS]: Adding file gros_topics_typ_0/ros_topics_typ.py OK!
+[ExOS]: Adding file gros_topics_typ_0/exos-comp-ros_topics_typ_1.0.0_amd64.deb OK!
+[ExOS]: Adding 
+runtime service dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb OK!
+[ExOS]: Adding runtime service dpkg --purge exos-comp-ros_topics_typ OK!
+[ExOS]: Adding runtime service cp ros_topics_typ.py /home/user/brdkAGV_linux/ros_ws/src/motor_control_exos/motor_control_exos/motor_control_exos.py OK!
+ExDeployTargetCheckConfigValues: Checking component:exos-data
+ExDeployTargetCheckConfigValues: Checking component:exos-data
+ExDeployTargetCheckConfigValues: Checking component:gros_topics_typ_0
+ExDeployTargetCheckConfigValues: Checking component:gros_topics_typ_0
+[ExDeployment]: Target configuration validated
+[ExOS]: Adding deployment process for target gTarget_0 OK!
+[ExOS]: gTarget_0: targetUrl:192.168.87.128, fileDirectory:C:/ADDONS/DATA/exos/, maxRestarts:10
+[ExDeployment]: Opening local storage on C:/ADDONS/DATA/exos/
+[ExDeployment]: Registering local components..
+[ExDeployment]: Found local component exos-data ..
+[ExArtefact]: create artefact exos-data
+[ExOS]: ExDeploy_0: deployment initialized with 0
+ExMon_0 initialized with 0
+[ExOS]: 1 targets started up
+[ExDeployment]: Found local file ufw-exos-data of component exos-data
+[ExArtefact]: artefact exos-data added file: name: ufw-exos-data size: 88 timestamp:142007072
+2
+[ExDeployment]: Found local file libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb of component exos-data
+[ExArtefact]: artefact exos-data added file: name: libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb size: 157244 timestamp:1420070722
+[ExDeployment]: Found local file libsodium18_1.0.11-2_amd64.deb of component exos-data
+[ExArtefact]: artefact exos-data added file: name: libsodium18_1.0.11-2_amd64.deb size: 161232 timestamp:1420070722
+[ExDeployment]: Found local file exos-data-ufw-profile.sh of component exos-data
+[ExArtefact]: artefact exos-data added file: name: exos-data-ufw-profile.sh size: 116 timestamp:1420076846
+[ExDeployment]: Found local file exos-data-ports-allow.sh of component exos-data
+[ExArtefact]: artefact exos-data added file: name: exos-data-ports-allow.sh size: 682 timestamp:1420076846
+[ExDeployment]: Found local file exos-data.conf of component exos-data
+[ExArtefact]: artefact exos-data added file: name: exos-data.conf size: 358 timestamp:1657105308
+[ExDeployment]: Found local file exos-data-eth_2.1.0-1_amd64.deb of component exos-data
+[ExArtefact]: artefact exos-data added file: name: exos-data-eth_2.1.0-1_amd64.deb size: 423520 timestamp:1420076846
+[ExDeployment]: Found local file exos-data-remove.sh of component exos-data
+
+[ExArtefact]: artefact exos-data added file: name: exos-data-remove.sh size: 483 timestamp:1420070724
+[ExDeployment]: Found local file run_server.sh of component exos-data
+[ExArtefact]: artefact exos-data added file: name: run_server.sh size: 257 timestamp:1420070722
+[ExDeployment]: Found local file setup_build_environment.sh of component exos-data
+[ExArtefact]: artefact exos-data added file: name: setup_build_environment.sh size: 2202 timestamp:1420076846
+[ExDeployment]: Found local file libzmq5_4.2.1-4+deb9u2_amd64.deb of component exos-data
+[ExArtefact]: artefact exos-data added file: name: libzmq5_4.2.1-4+deb9u2_amd64.deb size: 200934 timestamp:1420070722
+[ExDeployment]: Found local service dpkg -i *.deb of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.0.install type 1 workingdir: /opt/exos/exos-data metadata: {"execute":"dpkg -i *.deb"} execute: dpkg -i *.deb frame: /bin/bash -c '(dpkg -i *.deb) > /opt/exos/exos-data/exos-data.0.instal
+[ExDeployment]: Found local service dpkg --purge exos-data-eth of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.0.remove type 2 workingdir: /opt/exos/exos-data metadata: {"execute":"dpkg --purge exos-data-eth"} execute: dpkg --purge exos-data-eth frame: /bin/b
+ash -c '(dpkg --purge exos-data-eth) > 
+[ExDeployment]: Found local service sh exos-data-remove.sh of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.1.remove type 2 workingdir: /opt/exos/exos-data metadata: {"execute":"sh exos-data-remove.sh"} execute: sh exos-data-remove.sh frame: /bin/bash -c '(sh exos-data-remove.sh) > /opt/exos/ex
+[ExDeployment]: Found local service cp exos-data.conf /etc/exos-data.conf of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.0.startup type 3 workingdir: /opt/exos/exos-data metadata: {"execute":"cp exos-data.conf \/etc\/exos-data.conf"} execute: cp exos-data.conf /etc/exos-data.conf frame: /bin/bash -c '(cp ex
+[ExDeployment]: Found local service sh exos-data-ufw-profile.sh of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.1.startup type 3 workingdir: /opt/exos/exos-data metadata: {"execute":"sh exos-data-ufw-profile.sh"} execute: sh exos-data-ufw-profile.sh frame: /bin/bash -c '(sh exos-data-ufw-profile.sh
+[ExDeployment]: Found local service sh exos-data-ports-allow.sh of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.2.startup type 3 workingdir: /opt/exos/exos-data metadata: {"execute":"sh exos-data-ports-allow.sh"} execute: sh exos-data-
+ports-allow.sh frame: /bin/bash -c '(sh exos-data-ports-allow.sh
+[ExDeployment]: Found local service /usr/bin/exos_mr of component exos-data
+[ExArtefact]: artefact exos-data added new service exos-data.0.runtime type 4 workingdir: /opt/exos/exos-data metadata: {"execute":"\/usr\/bin\/exos_mr"} execute: /usr/bin/exos_mr frame: /bin/bash -c '(/usr/bin/exos_mr) 2> /opt/exos/exos-data/exos-
+[ExArtefact]: exos-data: generated json info:{"restart":2,"errorHandling":2,"files":[{"name":"ufw-exos-data","size":88,"timestamp":1420070722,"type":2},{"name":"libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb","size":157244,"timestamp":1420070722,"type":1},{
+[ExDeployment]: Found local component gros_topics_typ_0 ..
+[ExArtefact]: create artefact gros_topics_typ_0
+[ExDeployment]: Found local file ros_topics_typ.py of component gros_topics_typ_0
+[ExArtefact]: artefact gros_topics_typ_0 added file: name: ros_topics_typ.py size: 10863 timestamp:1657105994
+[ExDeployment]: Found local file exos-comp-ros_topics_typ_1.0.0_amd64.deb of component gros_topics_typ_0
+[ExArtefact]: artefact gros_topics_typ_0 added file: name: exos-comp-ros_topics_typ_1.0.0_amd64.deb size: 168762 timestamp:1657105994
+[ExDeployment]: Found local service dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb of component gros_topics_typ_0
+
+[ExArtefact]: artefact gros_topics_typ_0 added new service gros_topics_typ_0.0.install type 1 workingdir: /opt/exos/gros_topics_typ_0 metadata: {"execute":"dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb"} execute: dpkg -i exos-comp-ros_topics_typ
+[ExDeployment]: Found local service dpkg --purge exos-comp-ros_topics_typ of component gros_topics_typ_0
+[ExArtefact]: artefact gros_topics_typ_0 added new service gros_topics_typ_0.0.remove type 2 workingdir: /opt/exos/gros_topics_typ_0 metadata: {"execute":"dpkg --purge exos-comp-ros_topics_typ"} execute: dpkg --purge exos-comp-ros_topics_typ frame:
+[ExDeployment]: Found local service cp ros_topics_typ.py /home/user/brdkAGV_linux/ros_ws/src/motor_control_exos/motor_control_exos/motor_control_exos.py of component gros_topics_typ_0
+[ExArtefact]: artefact gros_topics_typ_0 added new service gros_topics_typ_0.0.startup type 3 workingdir: /opt/exos/gros_topics_typ_0 metadata: {"execute":"cp ros_topics_typ.py \/home\/user\/brdkAGV_linux\/ros_ws\/src\/motor_control_exos\/motor_con
+[ExArtefact]: gros_topics_typ_0: generated json info:{"restart":1,"errorHandling":1,"files":[{"name":"ros_topics_typ.py","size":10863,"timestamp":1657105994,"type":0},{"name":"exos-comp-ros_topics_typ_1.0.0_amd64.deb","size":168762,"timestamp":1657
+[ExDeployment]: Local components registered
+
+[ExDeployment]: Connecting to remote system..
+[ExDeployment]: Opening remote server opc.tcp://192.168.87.128:4840/ ..
+[ExDeployment]: Error 0xa0020000 (Unknown error.) connecting to remote server opc.tcp://192.168.87.128:4840/
+[ExDeployment]: Opening remote server opc.tcp://192.168.87.128:4840/ ..
+[uaLog]: Successfully attached to all needed fileDir resources
+[uaLog]: Successfully attached to all needed Service Manager resources
+[ExDeployment]: Connected to remote server opc.tcp://192.168.87.128:4840/
+[ExDeployment]: Checking remote server version..
+[ExDeployment]: Version query: /bin/bash -c '(dpkg -s exos-server | grep Version) > /opt/exos/exos-server-version.txt 2>&1'
+[ExDeployment]: exos-server-version.txt: Version: 2.1.0-1
+[ExDeployment]: Remote server version 2.1.0-1 up to date
+[ExDeployment]: Registering remote components..
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExArtefact]: create artefact gros_topics_typ_0
+[ExDeployment]: Found remote component gros_topics_typ_0..
+[ExArtefact]: artefact gros_topics_typ_0 adding file: name: ros_topics_typ.py size: 10863 timestamp: 1657105994 type: 0
+[ExArtefact]: artefact gros_topics_typ_0 adding file: name: exos-comp-ros_topics_typ_1.
+0.0_amd64.deb size: 168762 timestamp: 1657105994 type: 1
+[ExDeployment]: Found remote file ros_topics_typ.py of remote component gros_topics_typ_0
+[ExDeployment]: Found remote file exos-comp-ros_topics_typ_1.0.0_amd64.deb of remote component gros_topics_typ_0
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExArtefact]: create artefact exos-data
+[ExDeployment]: Found remote component exos-data..
+[ExArtefact]: artefact exos-data adding file: name: ufw-exos-data size: 88 timestamp: 1420070722 type: 2
+[ExArtefact]: artefact exos-data adding file: name: libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb size: 157244 timestamp: 1420070722 type: 1
+[ExArtefact]: artefact exos-data adding file: name: libsodium18_1.0.11-2_amd64.deb size: 161232 timestamp: 1420070722 type: 1
+[ExArtefact]: artefact exos-data adding file: name: exos-data-ufw-profile.sh size: 116 timestamp: 1420076846 type: 2
+[ExArtefact]: artefact exos-data adding file: name: exos-data-ports-allow.sh size: 682 timestamp: 1420076846 type: 0
+[ExArtefact]: artefact exos-data adding file: name: exos-data.conf size: 358 timestamp: 1657105308 type: 0
+[ExArtefact]: artefact exos-data adding file: name: exos-data-eth_2.1.0-1_amd64.deb size: 423520 timestamp: 1420076846 type: 1
+[ExArte
+fact]: artefact exos-data adding file: name: exos-data-remove.sh size: 483 timestamp: 1420070724 type: 2
+[ExArtefact]: artefact exos-data adding file: name: run_server.sh size: 257 timestamp: 1420070722 type: 2
+[ExArtefact]: artefact exos-data adding file: name: setup_build_environment.sh size: 2202 timestamp: 1420076846 type: 2
+[ExArtefact]: artefact exos-data adding file: name: libzmq5_4.2.1-4+deb9u2_amd64.deb size: 200934 timestamp: 1420070722 type: 1
+[ExDeployment]: Found remote file ufw-exos-data of remote component exos-data
+[ExDeployment]: Found remote file libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb of remote component exos-data
+[ExDeployment]: Found remote file libsodium18_1.0.11-2_amd64.deb of remote component exos-data
+[ExDeployment]: Found remote file exos-data-ufw-profile.sh of remote component exos-data
+[ExDeployment]: Found remote file exos-data-ports-allow.sh of remote component exos-data
+[ExDeployment]: Found remote file exos-data.conf of remote component exos-data
+[ExDeployment]: Found remote file exos-data-eth_2.1.0-1_amd64.deb of remote component exos-data
+[ExDeployment]: Found remote file exos-data-remove.sh of remote component exos-data
+[ExDeployment]: Found remote file run_server.sh of remote component exos-data
+[ExD
+eployment]: Found remote file setup_build_environment.sh of remote component exos-data
+[ExDeployment]: Found remote file libzmq5_4.2.1-4+deb9u2_amd64.deb of remote component exos-data
+[ExArtefact]: artefact exos-data added existing service exos-data.0.install type 1 workingdir: /opt/exos/exos-data metadata: {"execute":"dpkg -i *.deb"} execute: dpkg -i *.deb
+[ExDeployment]: Found remote service exos-data.0.install (dpkg -i *.deb) of remote component exos-data
+[ExArtefact]: artefact gros_topics_typ_0 added existing service gros_topics_typ_0.0.install type 1 workingdir: /opt/exos/gros_topics_typ_0 metadata: {"execute":"dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb"} execute: dpkg -i exos-comp-ros_topic
+[ExDeployment]: Found remote service gros_topics_typ_0.0.install (dpkg -i exos-comp-ros_topics_typ_1.0.0_amd64.deb) of remote component gros_topics_typ_0
+[ExArtefact]: artefact exos-data added existing service exos-data.1.remove type 2 workingdir: /opt/exos/exos-data metadata: {"execute":"sh exos-data-remove.sh"} execute: sh exos-data-remove.sh
+[ExDeployment]: Found remote service exos-data.1.remove (sh exos-data-remove.sh) of remote component exos-data
+[ExArtefact]: artefact gros_topics_typ_0 added existing service gros_topics_typ_0.0.remove type 2 workingdir: /opt/exos/gros_topics_typ_0 meta
+data: {"execute":"dpkg --purge exos-comp-ros_topics_typ"} execute: dpkg --purge exos-comp-ros_topics_typ
+[ExDeployment]: Found remote service gros_topics_typ_0.0.remove (dpkg --purge exos-comp-ros_topics_typ) of remote component gros_topics_typ_0
+[ExArtefact]: artefact gros_topics_typ_0 added existing service gros_topics_typ_0.0.startup type 3 workingdir: /opt/exos/gros_topics_typ_0 metadata: {"execute":"cp ros_topics_typ.py \/home\/user\/brdkAGV_linux\/ros_ws\/src\/motor_control_exos\/moto
+[ExDeployment]: Found remote service gros_topics_typ_0.0.startup (cp ros_topics_typ.py /home/user/brdkAGV_linux/ros_ws/src/motor_control_exos/motor_control_exos/motor_control_exos.py) of remote component gros_topics_typ_0
+[ExArtefact]: artefact exos-data added existing service exos-data.0.runtime type 4 workingdir: /opt/exos/exos-data metadata: {"execute":"\/usr\/bin\/exos_mr"} execute: /usr/bin/exos_mr
+[ExDeployment]: Found remote service exos-data.0.runtime (/usr/bin/exos_mr) of remote component exos-data
+[ExArtefact]: artefact exos-data added existing service exos-data.0.remove type 2 workingdir: /opt/exos/exos-data metadata: {"execute":"dpkg --purge exos-data-eth"} execute: dpkg --purge exos-data-eth
+[ExDeployment]: Found remote service exos-data.0.remove (dpkg --purge exos-data-eth) of remote component exos-data
+
+[ExArtefact]: artefact exos-data added existing service exos-data.0.startup type 3 workingdir: /opt/exos/exos-data metadata: {"execute":"cp exos-data.conf \/etc\/exos-data.conf"} execute: cp exos-data.conf /etc/exos-data.conf
+[ExDeployment]: Found remote service exos-data.0.startup (cp exos-data.conf /etc/exos-data.conf) of remote component exos-data
+[ExArtefact]: artefact exos-data added existing service exos-data.2.startup type 3 workingdir: /opt/exos/exos-data metadata: {"execute":"sh exos-data-ports-allow.sh"} execute: sh exos-data-ports-allow.sh
+[ExDeployment]: Found remote service exos-data.2.startup (sh exos-data-ports-allow.sh) of remote component exos-data
+[ExArtefact]: artefact exos-data added existing service exos-data.1.startup type 3 workingdir: /opt/exos/exos-data metadata: {"execute":"sh exos-data-ufw-profile.sh"} execute: sh exos-data-ufw-profile.sh
+[ExDeployment]: Found remote service exos-data.1.startup (sh exos-data-ufw-profile.sh) of remote component exos-data
+[ExDeployment]: Comparing components for deployment..
+[uaLog]: Successfully attached to all needed fileDir resources
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExDeployment]: Remote component gros_topics_typ_0 will be stopped: Installation settings for gTarget_0 enforce
+s a restart of the entire target
+[ExDeployment]: Remote component exos-data will be stopped: Installation settings for gTarget_0 enforces a restart of the entire target
+[ExDeployment]: Component exos-data will be started: Component is being restarted on the target
+[ExDeployment]: Component gros_topics_typ_0 will be started: Component is being restarted on the target
+[ExDeployment]: Stopping remote components..
+[ExOS]: DataConnection stopped on gTarget_0 using component exos-data
+[ExOS]: ExData_0: dataLogger already stopped
+[ExOS]: ExMR_0: dataConnection already stopped
+[ExDeployment]: Stopping remote component exos-data successful
+[ExDeployment]: Removing remote components..
+[uaLog]: Successfully attached to all needed fileDir resources
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExDeployment]: Transferring components..
+[ExDeployment]: Installing components..
+[ExDeployment]: Starting components..
+[ExDeployment]: Service exos-data.0.startup completed successfully - checking exos-data.0.startup.log..
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExDeployment]: Service exos-data.1.startup completed successfully - checking exos-data.1.startup.log..
+[
+uaLog]: Successfully attached to all needed fileDir resources
+[ExDeployment]: Service exos-data.2.startup completed successfully - checking exos-data.2.startup.log..
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExDeployment]: exos-data.2.startup.log: Enabling used ports for data connection:
+[ExDeployment]: exos-data.2.startup.log: Skipping adding existing rule
+[ExDeployment]: exos-data.2.startup.log: Skipping adding existing rule
+[ExDeployment]: Starting up component exos-data successful
+[ExDeployment]: Service gros_topics_typ_0.0.startup completed successfully - checking gros_topics_typ_0.0.startup.log..
+[uaLog]: Successfully attached to all needed fileDir resources
+[ExDeployment]: Starting up component gros_topics_typ_0 successful
+[ExDeployment]: Service exos-data.0.runtime started successfully.
+[ExDeployment]: Component exos-data operational
+[ExOS]: DataConnection started on gTarget_0 using component exos-data
+[ExOS]: exos_lmr_config_set_connection(eth://192.168.87.128:49002)
+[ExOS]: exos_lmr_config_set_cycle_time(50)
+[ExOS]: exos_lmr_config_set_filter(7)
+[ExOS]: exos_lmr_config_set_heartbeat(500)
+[ExOS]: exos_lmr_config_set_level(4)
+[ExOS]: exos_lmr_config_set_timeout(
+2)
+1657198748.740999990 [AR:exos_lmr] <DEBUG>: AR module connected: exos_log_collector
+[TaskHandler]: Started async task 1103
+[ExOS]: ExData_0: dataLogger initialized with 0
+[TaskHandler]: Created async task 1110 with name: ExMR_0 priority: 100
+[ExOS]: Created CriticalSection 1111 for dataConnection FUBs
+[ExOS]: exos_dmr_config_set_connection(eth://192.168.87.128:49001)
+[ExOS]: exos_dmr_config_set_cycle_time(10)
+[ExOS]: exos_dmr_config_set_heartbeat(500)
+[ExOS]: exos_dmr_config_set_timeout(2)
+[ExOS]: exos_dmr_config_set_precision(5000)
+[ExOS]: exos_dmr_config_set_guard_time(180)
+[ExOS]: exos_dmr_config_set_trace_level(5)
+[ExOS]: Created CriticalSection 1112 for datamodel ros_topics_typ_0 FUBs
+[ExOS]: exos_dmr_config_add_datamodel(ros_topics_typ_0,eth://192.168.87.128:49003)
+[AR_ZMQ]: zmq_socket(): new SUB socket, sockets: 9
+[AR_ZMQ]: zmq_socket(): created FIFO with size:262144
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/log_config
+[AR_ZMQ]: zmq_bind(): add SUB socket subscriber to queue: ipc:///tmp/exos/log_config, subscribers: 4
+[AR_ZMQ]: zmq_socket(): new PUB socket, sockets: 10
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/log_
+data
+[AR_ZMQ]: zmq_bind(): assigned queue: ipc:///tmp/exos/log_data to PUB socket
+[AR_ZMQ]: zmq_socket(): new SUB socket, sockets: 11
+[AR_ZMQ]: zmq_socket(): created FIFO with size:262144
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/log_config
+[AR_ZMQ]: zmq_bind(): add SUB socket subscriber to queue: ipc:///tmp/exos/log_config, subscribers: 5
+[AR_ZMQ]: zmq_socket(): new PUB socket, sockets: 12
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/log_data
+[AR_ZMQ]: zmq_bind(): assigned queue: ipc:///tmp/exos/log_data to PUB socket
+[AR_ZMQ]: zmq_socket(): new SUB socket, sockets: 13
+[AR_ZMQ]: zmq_socket(): created FIFO with size:262144
+[AR_ZMQ]: zmq_bind(): new queue: ipc:///tmp/exos/config created, queues: 3
+[AR_ZMQ]: zmq_bind(): add SUB socket subscriber to queue: ipc:///tmp/exos/config, subscribers: 1
+[AR_ZMQ]: zmq_socket(): new SUB socket, sockets: 14
+[AR_ZMQ]: zmq_socket(): created FIFO with size:262144
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/log_config
+[AR_ZMQ]: zmq_bind(): add SUB socket subscriber to queue: ipc:///tmp/exos/log_config, subscribers: 6
+[AR_ZMQ]: zmq_socket(): new PUB socket, sockets: 15
+
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/log_data
+[AR_ZMQ]: zmq_bind(): assigned queue: ipc:///tmp/exos/log_data to PUB socket
+[TaskHandler]: Started async task 1110
+[ExOS]: ExMR_0: dataConnection initialized with 0
+1657198748.790999960 [AR:exos_lmr] <DEBUG>: AR module connected: exos_srv_server
+1657198748.839999940 [AR:exos_lmr] <DEBUG>: AR module connected: exos_msg_server
+1657198748.888999830 [AR:exos_lmr] <DEBUG>: AR module connected: exos_sync_master
+1657198748.938000010 [AR:exos_log_collector] <INFO>: lxi connecting to: eth://192.168.87.128:49002
+1657198748.986999970 [AR:exos_sync_master] <INFO>: Sync Master connecting to eth://192.168.87.128:49001 ..
+1657198749.035999960 [AR:exos_srv_server] <INFO>: msg_server initialized!
+1657198749.084999940 [AR:exos_srv_server] <INFO>: exos_sync initialized!
+1657198750.849000000 [AR:exos_sync_master] <SUCCESS>: Sync Master Connected!
+1657198750.898000010 [AR:exos_sync_master] <SUCCESS>: Sync Master Synchronized!
+1657198751.436999980 [AR:exos_lmr] <SUCCESS>: Log Server Connected!
+1657198751.436999980 [AR:exos_lmr] <INFO>: Enabled Logging on this system
+1657198751.632999950 [AR:exos_lmr] <DE
+BUG>: Remote System Enabled Logging
+1657198751.632999950 [AR:exos_lmr] <DEBUG>: Remote System Enabled Logging
+[ExDeployment]: Component gros_topics_typ_0 operational
+[ExDeployment]: All components operational. Deployment finished
+[AR_ZMQ]: zmq_socket(): new PUB socket, sockets: 16
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/config
+[AR_ZMQ]: zmq_bind(): assigned queue: ipc:///tmp/exos/config to PUB socket
+[AR_ZMQ]: zmq_socket(): new SUB socket, sockets: 17
+[AR_ZMQ]: zmq_socket(): created FIFO with size:262144
+[AR_ZMQ]: zmq_bind(): new queue: ipc:///tmp/exos/datamodels/ros_topics_typ_0/input created, queues: 4
+[AR_ZMQ]: zmq_bind(): add SUB socket subscriber to queue: ipc:///tmp/exos/datamodels/ros_topics_typ_0/input, subscribers: 1
+[AR_ZMQ]: zmq_socket(): new PUB socket, sockets: 18
+[AR_ZMQ]: zmq_bind(): new queue: ipc:///tmp/exos/datamodels/ros_topics_typ_0/output created, queues: 5
+[AR_ZMQ]: zmq_bind(): assigned queue: ipc:///tmp/exos/datamodels/ros_topics_typ_0/output to PUB socket
+datamodel_register: _data_init: 419us
+datamodel_register: 1386us
+exos_serv: server_receive: exos_srv_datamodel_init: 404us
+1657198753.788999960 [AR:gros_topics_typ_0] <SUCCESS>: starting ros_topics_typ applicatio
+n..
+exos_srv_struct: server_cyclic: add_srv_struct: 338us
+[AR_ZMQ]: zmq_socket(): new SUB socket, sockets: 19
+[AR_ZMQ]: zmq_socket(): created FIFO with size:262144
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/datamodels/ros_topics_typ_0/output
+[AR_ZMQ]: zmq_bind(): add SUB socket subscriber to queue: ipc:///tmp/exos/datamodels/ros_topics_typ_0/output, subscribers: 1
+[AR_ZMQ]: zmq_socket(): new PUB socket, sockets: 20
+[AR_ZMQ]: zmq_bind(): assign socket to exisiting queue:ipc:///tmp/exos/datamodels/ros_topics_typ_0/input
+[AR_ZMQ]: zmq_bind(): assigned queue: ipc:///tmp/exos/datamodels/ros_topics_typ_0/input to PUB socket
+exos_srv: operate_datamodel: INIT: 760us
+1657198753.838000000 [AR:exos_api_gros_topics_typ_0] <DEBUG>: connect PUB on ipc:///tmp/exos/config
+exos_srv: operate_datamodel: INIT_DONE: 411us
+1657198753.886999970 [AR:exos_api_gros_topics_typ_0] <DEBUG>: connect SUB on ipc:///tmp/exos/datamodels/ros_topics_typ_0/input
+1657198753.935999940 [AR:exos_api_gros_topics_typ_0] <DEBUG>: connect PUB on ipc:///tmp/exos/datamodels/ros_topics_typ_0/output
+1657198753.984999970 [AR:exos_api_gros_topics_typ_0] <INFO>: datamodel_register: sending connect for pid:[413:2]
+1657198754.033999960 [AR:exos_api_gros_topics_typ_0] <DE
+BUG>: send connect for datamodel:ros_topics_typ_0 config_size:4624
+1657198754.083000000 [AR:exos_msg_server] <DEBUG>: received new datamodel ros_topics_typ_0, config_size:4624
+1657198754.131999980 [AR:exos_msg_server] <INFO>: exos_serv: datamodel: ros_topics_typ_0 found in configuration, connecting to eth://192.168.87.128:49003
+1657198754.180999940 [AR:exos_msg_server] <DEBUG>: srv_server: start parsing datamodel ros_topics_typ_0 pid:[413:2]
+1657198754.229999960 [AR:exos_msg_server] <INFO>: api register (ros_topics_typ_0) -> creating new datamodel for pid: [413:2]..
+1657198754.278999970 [AR:exos_msg_server] <INFO>: srv_server: datamodel ros_topics_typ_0 parsed correctly pid:[413:2]
+1657198754.327999960 [AR:exos_srv_server] <INFO>: adding datamodel ros_topics_typ_0 pid:[413:2] after parsing..
+1657198754.376999930 [AR:exos_msg_server] <INFO>: initializing datamodel ros_topics_typ_0 ..
+1657198754.426000000 [AR:exos_msg_server] <DEBUG>: bind SUB on ipc:///tmp/exos/datamodels/ros_topics_typ_0/output affinity: 0x4
+1657198754.474999990 [AR:exos_msg_server] <DEBUG>: bind PUB on ipc:///tmp/exos/datamodels/ros_topics_typ_0/input affinity: 0x8
+1657198754.523999950 [AR:exos_msg_server] <DEBUG>: server affinity: 0xc
+1657198754.572999970 [AR:exos_msg
+_server] <SUCCESS>: datamodel ros_topics_typ_0 initialized! adding peer for pid: [413:2]
+1657198754.621999960 [AR:exos_srv_server] <INFO>: datamodel ros_topics_typ_0 initialized!
+1657198754.670999970 [AR:exos_msg_server] <INFO>: connecting datamodel ros_topics_typ_0 ..
+1657198754.719999980 [AR:exos_msg_server] <SUCCESS>: datamodel ros_topics_typ_0 connecting to: eth://192.168.87.128:49003
+1657198754.768999960 [AR:exos_msg_server] <SUCCESS>: lxi [ros_topics_typ_0] info: eth_area: no areas found, skipping sync channel
+1657198754.817999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198756.042999940 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198758.150000000 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198760.256999990 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198762.412999940 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arco
+nnect
+1657198764.519999920 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198766.626999970 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198768.735000000 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198770.841999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198772.948999930 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198775.055999970 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198777.211999970 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198779.319000010 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198781.425999930 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198783.532999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198785.640000000 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198787.746999960 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198789.853999960 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198791.960999950 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198794.116999950 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198796.223999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198798.330999910 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198800.437999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198802.544999920 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198804.651999920 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198806.759000000 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198808.865999960 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198811.022999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198813.130000000 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198815.236999950 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198817.343999960 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198819.450999970 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198821.606999940 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect
+1657198823.713999980 [AR:exos_msg_server] <INFO>: lxi [ros_topics_typ_0] debug: client_error: Connection refused (ECONNREFUSED) at arconnect

@@ -46,7 +46,9 @@ TYPE
 		exOS_ERR_NOT_RESPONSIVE, (*The time synchronization is not responsive.*)
 		exOS_ERR_NOT_SYNCHRONIZED, (*The time synchronization has not reached the configured precision.*)
 		exOS_ERR_NOT_CONFIGURED, (*The datamodel is not configured on this target.*)
-		exOS_ERR_OVERFLOW (*An overflow occurred.*)
+		exOS_ERR_OVERFLOW, (*An overflow occurred.*)
+		exOS_ERR_PARAMETER_MISSING, (*A mandatory parameter is missing.*)
+		exOS_ERR_API_ERROR (*An internal API error occured, see ErrorID.*)
 		);
 	ExTargetLink : 	STRUCT  (*Unique identification of an exOS Target.*)
 		internal : UDINT;

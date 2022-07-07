@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.10.3.60 FileVersion="4.9"?>
+<?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="X90AO410.08-00" Type="X90AO410.08-00" Version="1.1.0.0">
     <Connection Connector="ST" TargetModule="X90CP174_48_00" TargetConnector="ST4" />
   </Module>
-  <Module Name="X90AT910.08-00" Type="X90AT910.08-00" Version="1.0.2.0">
+  <Module Name="X90AT910.08-00" Type="X90AT910.08-00" Version="1.0.1.0">
     <Connection Connector="ST" TargetModule="X90CP174_48_00" TargetConnector="ST3" />
   </Module>
-  <Module Name="X90CP174_48_00" Type="X90CP174.48-00" Version="1.2.2.0">
-    <Module Name="X1" Type="X1" Virtual="true" Version="1.2.2.0">
+  <Module Name="X90CP174_48_00" Type="X90CP174.48-00" Version="1.4.5.0">
+    <Module Name="X1" Type="X1" Virtual="true" Version="1.4.5.0">
       <Connection Connector="SL" TargetModule="X90CP174_48_00" TargetConnector="X1" />
     <Parameter ID="ChannelConfig01" Value="42" />
     <Parameter ID="DigitalFilterPin01" Value="0" />
@@ -78,10 +78,10 @@
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="2" />
   </Module>
-  <Module Name="X90DI110.10-00" Type="X90DI110.10-00" Version="1.0.1.0">
+  <Module Name="X90DI110.10-00" Type="X90DI110.10-00" Version="1.1.1.0">
     <Connection Connector="ST" TargetModule="X90CP174_48_00" TargetConnector="ST2" />
   </Module>
-  <Module Name="X90PO210.08-00" Type="X90PO210.08-00" Version="1.2.0.0">
+  <Module Name="X90PO210.08-00" Type="X90PO210.08-00" Version="1.4.0.0">
     <Connection Connector="ST" TargetModule="X90CP174_48_00" TargetConnector="ST1" />
   </Module>
 </Hardware>

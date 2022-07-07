@@ -22,8 +22,8 @@
           <Group ID="TimeConnection">
             <Property ID="TimePort" Value="49001" />
           </Group>
-          <Property ID="PrecisionUsec" Value="1000" />
-          <Property ID="GuardTimeSec" Value="36" />
+          <Property ID="PrecisionUsec" Value="5000" />
+          <Property ID="GuardTimeSec" Value="180" />
           <Property ID="DeviationPerHourUsec" Value="100000" />
         </Group>
         <Group ID="DataConnectionLogging">
@@ -54,9 +54,21 @@
           </Group>
         </Group>
       </Group>
+      <Group ID="Component[1]">
+        <Property ID="ComponentConfigurationLink" Value="gWaterTank_0" />
+        <Group ID="DataModels">
+          <Group ID="Instance[0]">
+            <Property ID="InstanceName" Value="WaterTank_0" />
+            <Group ID="InstanceConnection">
+              <Property ID="InstancePort" Value="49004" />
+              <Property ID="InstanceShmPath" Value="WaterTank_0" />
+            </Group>
+          </Group>
+        </Group>
+      </Group>
     </Group>
     <Group ID="ComponentDataConnection">
-      <Property ID="Version" Value="2.0.0-1" />
+      <Property ID="Version" Value="2.1.0-1" />
       <Property ID="ErrorHandling" Value="Target" />
       <Property ID="RestartEvent" Value="Target" />
       <Property ID="StartupTimeout" Value="5" />
@@ -67,42 +79,46 @@
             <Property ID="ChangeEvent" Value="Ignore" />
           </Group>
           <Group ID="File[1]">
+            <Property ID="FileName" Value="exos-data-ufw-profile.sh" />
+            <Property ID="ChangeEvent" Value="Ignore" />
+          </Group>
+          <Group ID="File[2]">
             <Property ID="FileName" Value="exos-data-ports-allow.sh" />
             <Property ID="ChangeEvent" Value="Restart" />
           </Group>
-          <Group ID="File[2]">
+          <Group ID="File[3]">
             <Property ID="FileName" Value="exos-data.conf" />
             <Property ID="ChangeEvent" Value="Restart" />
           </Group>
-          <Group ID="File[3]">
-            <Property ID="FileName" Value="exos-data_2.0.0-1_amd64.deb" />
-            <Property ID="ChangeEvent" Value="Reinstall" />
-          </Group>
           <Group ID="File[4]">
-            <Property ID="FileName" Value="exos-data-eth_2.0.0-1_amd64.deb" />
+            <Property ID="FileName" Value="exos-data_2.1.0-1_amd64.deb" />
             <Property ID="ChangeEvent" Value="Reinstall" />
           </Group>
           <Group ID="File[5]">
+            <Property ID="FileName" Value="exos-data-eth_2.1.0-1_amd64.deb" />
+            <Property ID="ChangeEvent" Value="Reinstall" />
+          </Group>
+          <Group ID="File[6]">
             <Property ID="FileName" Value="exos-data-remove.sh" />
             <Property ID="ChangeEvent" Value="Ignore" />
           </Group>
-          <Group ID="File[6]">
+          <Group ID="File[7]">
             <Property ID="FileName" Value="run_server.sh" />
             <Property ID="ChangeEvent" Value="Ignore" />
           </Group>
-          <Group ID="File[7]">
+          <Group ID="File[8]">
             <Property ID="FileName" Value="setup_build_environment.sh" />
             <Property ID="ChangeEvent" Value="Ignore" />
           </Group>
-          <Group ID="File[8]">
+          <Group ID="File[9]">
             <Property ID="FileName" Value="libzmq5_4.2.1-4+deb9u2_amd64.deb" />
             <Property ID="ChangeEvent" Value="Reinstall" />
           </Group>
-          <Group ID="File[9]">
+          <Group ID="File[10]">
             <Property ID="FileName" Value="libpgm-5.2-0_5.2.122~dfsg-2_amd64.deb" />
             <Property ID="ChangeEvent" Value="Reinstall" />
           </Group>
-          <Group ID="File[10]">
+          <Group ID="File[11]">
             <Property ID="FileName" Value="libsodium18_1.0.11-2_amd64.deb" />
             <Property ID="ChangeEvent" Value="Reinstall" />
           </Group>
@@ -135,7 +151,7 @@
           </Group>
           <Group ID="Service[5]">
             <Property ID="Type" Value="Startup" />
-            <Property ID="Command" Value="cp ufw-exos-data /etc/ufw/applications.d/ufw-exos-data" />
+            <Property ID="Command" Value="sh exos-data-ufw-profile.sh" />
             <Property ID="WorkingDirectory" />
           </Group>
           <Group ID="Service[6]">
@@ -157,7 +173,7 @@
       <Selector ID="SimDataConnection" Value="On">
         <Property ID="SimConnectionType" Value="TCPIP" />
         <Group ID="SimTimeSynchronization">
-          <Property ID="SimPrecisionUsec" Value="5000" />
+          <Property ID="SimPrecisionUsec" Value="10000" />
           <Property ID="SimGuardTimeSec" Value="30" />
         </Group>
       </Selector>
