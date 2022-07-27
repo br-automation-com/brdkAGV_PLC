@@ -71,7 +71,7 @@ END_PROGRAM
 PROGRAM _CYCLIC
     //--------------- ex OS ----------------
     //Auto connect:
-	ros_topics_typCyclic_0.Enable := ExComponentInfo_0.Operational AND NOT ros_topics_typCyclic_0.Aborted; // Component has been deployed and started up successfully
+	ros_topics_typCyclic_0.Enable := ExComponentInfo_0.Operational; // Component has been deployed and started up successfully
     
 	//Auto connect when deployment is off and manually started in GPOS:
 	//ros_topics_typCyclic_0.Enable := TRUE;

@@ -48,7 +48,7 @@
           <Group ID="Instance[0]">
             <Property ID="InstanceName" Value="ros_topics_typ_0" />
             <Group ID="InstanceConnection">
-              <Property ID="InstancePort" Value="49003" />
+              <Property ID="InstancePort" Value="49005" />
               <Property ID="InstanceShmPath" Value="ros_topics_typ_0" />
             </Group>
           </Group>
